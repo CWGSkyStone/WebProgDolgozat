@@ -15,8 +15,13 @@ const form = document.querySelector('#inputForm');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    startCalc();
+    
+});
+
+function startCalc(){
     const weight = weightInput.value;
     const height = heightInput.value;
     const weightIndexValue = weight / (height * height);
     weightIndex.value = weightIndexValue
-});
+}
